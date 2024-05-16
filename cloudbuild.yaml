@@ -237,7 +237,7 @@ steps:
         fi
       fi
 
-logsBucket: "gs://${_GCS_BUCKET}"
+logsBucket: 'gs://dh-cortex-logs'
 timeout: 32400s
 substitutions:
   _CONFIG_FILE: "config/config.json"
