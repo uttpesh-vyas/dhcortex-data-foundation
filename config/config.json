@@ -1,26 +1,26 @@
 {
-    "testData": true,
+    "testData": false,
     "deploySAP": true,
-    "deploySFDC": true,
-    "deployMarketing": true,
-    "deployDataMesh": true,
-    "turboMode": true,
-    "projectIdSource": "",
-    "projectIdTarget": "",
-    "targetBucket": "",
+    "deploySFDC": false,
+    "deployMarketing": false,
+    "deployDataMesh": false,
+    "turboMode": false,
+    "projectIdSource": "dhfs-analytics-prod-1158",
+    "projectIdTarget": "dhfs-analytics-dev-qa-4800",
+    "targetBucket": "dh-cortex",
     "location": "US",
     "languages": [
         "E",
-        "S"
+        "D"
     ],
     "currencies": [
-        "USD"
+        "EUR"
     ],
     "testDataProject": "kittycorn-public",
     "k9": {
         "datasets": {
-            "processing": "K9_PROCESSING",
-            "reporting": "K9_REPORTING"
+            "processing": "cl_fsa",
+            "reporting": "cl_fsa"
         }
     },
     "DataMesh": {
@@ -32,12 +32,12 @@
     "SAP": {
         "deployCDC": true,
         "datasets": {
-            "cdc": "",
-            "raw": "",
-            "ml": "ML_MODELS",
-            "reporting": "REPORTING"
+            "cdc": "cl_cortex",
+            "raw": "RAW_SAP_DP1",
+            "ml": "cl_cortex",
+            "reporting": "rl_fsa_test"
         },
-        "SQLFlavor": "ecc",
+        "SQLFlavor": "s4",
         "mandt": "100"
     },
     "SFDC": {
@@ -55,8 +55,6 @@
         "deployCM360": true,
         "deployTikTok": true,
         "deployLiveRamp": true,
-        "deployMeta": true,
-        "deploySFMC": true,
         "dataflowRegion": "",
         "GoogleAds": {
             "deployCDC": true,
@@ -88,29 +86,6 @@
             "datasets": {
                 "cdc": ""
             }
-        },
-        "Meta": {
-            "deployCDC": true,
-            "datasets": {
-                "cdc": "",
-                "raw": "",
-                "reporting": "REPORTING_Meta"
-            }
-        },
-        "SFMC": {
-            "deployCDC": true,
-            "fileTransferBucket": "",
-            "datasets": {
-                "cdc": "",
-                "raw": "",
-                "reporting": "REPORTING_SFMC"
-            }
         }
-    },
-    "shareWithCredly": false,
-    "userInfo": {
-        "email": "",
-        "firstName": "",
-        "lastName": ""
     }
 }
